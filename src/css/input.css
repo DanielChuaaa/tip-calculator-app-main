@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  html,
+  body {
+    @apply max-w-maxw1200px  mx-auto pt-8 md:pb-8 pb-0 md:px-4 px-0 font-ff bg-LightgrayishCyan;
+  }
+
+  .logo {
+    @apply relative -top-8 flex justify-center py-4;
+  }
+
+  .card {
+    @apply grid md:grid-cols-2 grid-cols-1 gap-10 w-full md:px-10 py-8 p-6 rounded-borderadius bg-white;
+  }
+
+  .billWrapper {
+    @apply mt-2;
+  }
+
+  .p_bill {
+    @apply text-sm text-Verydarkcyan;
+  }
+
+  .inputWrapper {
+    @apply flex items-center mt-1;
+  }
+
+  .dollarIcon {
+    @apply absolute ml-3;
+  }
+
+  .inputBill {
+    @apply w-full p-2 text-xl text-right text-Verydarkcyan font-bold rounded  bg-VerylightgrayishCyan cursor-pointer focus:outline-Strongcyan focus:shadow-boxShadow transition ease-in-out;
+  }
+
+  .p_tip {
+    @apply text-sm mt-8 text-Verydarkcyan;
+  }
+
+  .tipSelection {
+    @apply grid md:grid-cols-3 grid-cols-2 gap-gap-3 mt-4;
+  }
+
+  .tipButton {
+    @apply text-white text-center text-xl font-bold py-2 px-3 rounded bg-Verydarkcyan hover:bg-Strongcyan  transition ease-in-out delay-75;
+  }
+
+  .tipButtonCustom {
+    @apply text-Verydarkcyan text-center text-xl font-bold  py-2  w-full rounded bg-VerylightgrayishCyan  outline-2 focus:outline-Strongcyan focus:shadow-boxShadow placeholder:text-Darkgrayishcyan;
+  }
+
+  .tipNumber[data-bg="custom"] {
+    @apply text-xl p-0 bg-VerylightgrayishCyan;
+  }
+
+  .p_people {
+    @apply md:text-sm text-sm text-Verydarkcyan;
+  }
+
+  .personIcon {
+    @apply absolute ml-3;
+  }
+
+  .inputPeople {
+    @apply w-full p-2 mt-1 text-xl text-right text-Verydarkcyan font-bold rounded bg-VerylightgrayishCyan cursor-pointer focus:outline-Strongcyan focus:shadow-boxShadow  ease-in-out;
+  }
+
+  .cardTotal {
+    @apply py-9 md:px-8 px-6 w-full rounded-2xl bg-Verydarkcyan;
+  }
+
+  .totalWrapper {
+    @apply flex justify-between items-center;
+  }
+
+  .totalWrapper[data-top="top"] {
+    @apply mt-8;
+  }
+
+  .p_tipAmount {
+    @apply text-sm font-bold text-white;
+  }
+
+  .p_person {
+    @apply text-xs text-Grayishcyan;
+  }
+
+  .tip_dollar {
+    @apply md:text-5xl text-4xl text-right  text-Strongcyan font-bold;
+  }
+
+  .p_total {
+    @apply text-sm font-bold text-white;
+  }
+
+  .total_dollar {
+    @apply md:text-5xl text-4xl text-Strongcyan font-bold;
+  }
+
+  .resetButton {
+    @apply md:mt-32 mt-10 py-2  px-4 w-full text-Verydarkcyan text-xl font-bold bg-Strongcyan hover:bg-LightgrayishCyan rounded opacity-30;
+  }
+}
+
+/* active */
+
+.inputBill-active {
+  @apply border-2 border-red-600;
+}
+
+.inputPeople-active {
+  @apply border-2 border-red-600;
+}
+
+.errorMsg-active {
+  @apply text-sm  text-red-600;
+}
+
+.tipButton-active {
+  @apply bg-Strongcyan text-Verydarkcyan;
+}
+
+.resetButton-active {
+  @apply bg-Strongcyan opacity-100 transition ease-in-out delay-75;
+}

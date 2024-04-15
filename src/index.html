@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../images/logo.svg" alt="logo" />
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <section>
+          <div class="billWrapper">
+            <div class="flex justify-between">
+              <p class="p_bill">Bill</p>
+              <div class="errorMsg" id="errorBill"></div>
+            </div>
+            <div class="inputWrapper">
+              <img src="../images/icon-dollar.svg" alt="dollarIcon" class="dollarIcon" />
+              <input type="number" class="inputBill" value="142.55" placeholder="0" required />
+            </div>
+          </div>
+
+          <p class="p_tip">Select Tip %</p>
+          <div class="tipSelection">
+            <button class="tipButton" value="5">5 %</button>
+            <button class="tipButton" value="10">10 %</button>
+            <button class="tipButton tipButton-active" value="15">15 %</button>
+            <button class="tipButton" value="20">25 %</button>
+            <button class="tipButton" value="30">50 %</button>
+            <input type="number" placeholder="Custom" class="tipButtonCustom" data-bg="custom" />
+          </div>
+
+          <div class="flex justify-between mt-8">
+            <p class="p_people">Number of People</p>
+            <div class="errorMsg" id="errorPeople"></div>
+          </div>
+
+          <div class="inputWrapper">
+            <img src="../images/icon-person.svg" alt="personIcon" class="personIcon" />
+            <input type="number" class="inputPeople" value="5" placeholder="0" />
+          </div>
+        </section>
+
+        <section>
+          <div class="cardTotal">
+            <div class="totalWrapper">
+              <div>
+                <p class="p_tipAmount">Tip Amount</p>
+                <p class="p_person">/ Person</p>
+              </div>
+              <div>
+                <h3 class="tip_dollar">$0.00</h3>
+              </div>
+            </div>
+
+            <div class="totalWrapper" data-top="top">
+              <div>
+                <p class="p_total">Total</p>
+                <p class="p_person">/ Person</p>
+              </div>
+              <div>
+                <h3 class="total_dollar">$0.00</h3>
+              </div>
+            </div>
+
+            <button class="resetButton">RESET</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
